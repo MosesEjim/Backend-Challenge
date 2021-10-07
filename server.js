@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 
 // Includes routes
-const buyRequests = require('./routes/api/BuyRequest');
+const requests = require('./routes/api/requests');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,7 +30,7 @@ mongoose
 
 
 // use routes
-app.use('/api/requests', buyRequests);
+app.use('/api/requests', requests);
 
 
 // Define Port
