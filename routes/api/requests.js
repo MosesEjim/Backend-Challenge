@@ -49,7 +49,7 @@ router.post("/buy/create", (req, res) => {
       });
     })
     .catch((err) => {
-      return res.status(404).json({ message:  'An error occured' })
+      return res.status(404).json({ error:  err })
     });
 });
 
@@ -74,7 +74,7 @@ router.post("/sell/create", (req, res) => {
       });
     })
     .catch((err) => {
-      return res.status(404).json({ message:  'An error occured' })
+      return res.status(404).json({ error:  err })
     });
 });
 
