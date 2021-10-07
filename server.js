@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-    res.json({ msg: 'BuyRequest works' });
+    res.json({ msg: 'Welcome to my Phone stores' });
 });
 
 // DB config
