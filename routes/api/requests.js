@@ -48,7 +48,9 @@ router.post("/buy/create", (req, res) => {
         },
       });
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      return res.status(404).json({ message:  'An error occured' })
+    });
 });
 
 router.post("/sell/create", (req, res) => {
@@ -71,7 +73,9 @@ router.post("/sell/create", (req, res) => {
         },
       });
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      return res.status(404).json({ message:  'An error occured' })
+    });
 });
 
 module.exports = router;
